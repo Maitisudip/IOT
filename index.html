@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoTiView</title>
+  <link rel="stylesheet" href="style.css" />  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ⬅ Header Component -->
+  <header class="w-full absolute top-0 left-0 z-50 bg-black/50 text-white flex justify-between items-center p-2 flex-wrap">
+    <!-- Logo -->
+    <div class="flex items-center gap-2 text-xl font-bold">
+      <img src="assets/logo.svg" alt="IOTIVIEW Logo" class="w-[30px]" />
+      <span class="logo-text hidden md:inline">IOTIVIEW</span>
+    </div>
+
+    <!-- CTA: Login & Menu -->
+    <div class="flex items-center gap-4">
+      <!-- Mobile Login -->
+      <a href="#" class="header-login flex items-center gap-1 bg-white/20 text-white px-4 py-2 rounded-full font-bold md:hidden">
+        <img src="assets/login.svg" alt="Login" class="w-4 h-4" />
+        <span>Login</span>
+      </a>
+
+      <!-- Hamburger -->
+      <button id="menuToggle" class="menu-toggle flex lg:hidden w-10 h-10 justify-center items-center">
+        <img src="assets/menu.svg" alt="Menu" class="w-8 h-8" />
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu" class="w-full lg:w-auto hidden lg:flex flex-col lg:flex-row items-start lg:items-center lg:gap-6 gap-4 p-4 lg:p-0 ">
+      <div class="dropdown cursor-pointer">Solutions</div>
+      <div class="dropdown cursor-pointer">Industries</div>
+      <div class="dropdown cursor-pointer">Company</div>
+      <div class="dropdown cursor-pointer">Insights</div>
+      <div><a href="#" class="text-white font-medium">Contact Us</a></div>
+
+      <!-- Desktop Login -->
+      <div class="hidden lg:flex items-center gap-1 bg-white/20 px-4 py-2 rounded-full font-bold">
+        <img src="assets/login.svg" alt="Login" class="w-4 h-4" />
+        <span>Product Login</span>
+      </div>
+<div class="mt-3 lg:mt-0">
+  <a href="#" class="btn-book bg-white text-black font-bold px-4 py-2 rounded-full">Book Demo</a>
+</div>
+    
+    </nav>
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+
+  <!-- ⬅ Hero Component -->
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Production Intelligence Platform<br>Purpose-Built for Manufacturers
+      </h1>
+      <p class="hero-subtitle">Machine Monitoring Insights for Smarter Manufacturing Decisions</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Book Demo</a>
+        <a href="#" class="btn-outline">See IoTiView in Action</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⬅ Mobile Menu Toggle Script -->
+
+
+<div class="marquee">
+  <div class="marquee-content">
+    <img src="assets/clogo/clogo1.svg" alt="Logos">
+    <img src="assets/clogo/clogo2.svg" alt="Logos">
+    <img src="assets/clogo/clogo3.svg" alt="Logos">
+    <img src="assets/clogo/clogo4.svg" alt="Logos">
+  </div>
+</div>
+
+  <!-- ⬅ IoTiView Feature Section -->
+<section class="iotiview-section">
+  <div class="iotiview-container">
+    <div class="iotiview-text">
+      <h2>Transform Your Factory<br>with IoTiView</h2>
+      <p>
+        IoTiView offers seamless edge connectivity and out-of-the-box applications, empowering you to digitize your factory and maximize equipment uptime.
+        Boost productivity and efficiency by harnessing the power of real-time machine monitoring, deep analytics, and AI-driven predictive insights.
+      </p>
+      <a href="#" class="btn-primary">Explore IoTiView</a>
+    </div>
+    <div class="iotiview-image">
+      <img src="assets/dashboard.png" alt="IoTiView Dashboard" />
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <h2>Type for the Video</h2>
+  <p class="subtitle">
+    Crypto ipsum bitcoin ethereum dogecoin litecoin. THETA aave ethereum avalanche cosmos.
+  </p>
+
+  <div class="video-container">
+    <img src="assets/BG.png" alt="Video Thumbnail" class="video-thumbnail">
+    <div class="play-button">
+      <img src="assets/Play.svg" alt="Play Button">
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="testimonial-content">
+    <div class="justify-center flex"><img src="assets/Company-logo.svg" alt="Sisyphus Logo" class="logoCompany" /> </div>
+    <h2>IoTiView Has Been a Game Change for Us</h2>
+    <!-- Slide 1 -->
+    <div class="testimonial-slide active">
+      <div class="person">
+        <img src="assets/Avatar.svg" alt="Candice Wu" class="avatar" />
+        <p class="name">Candice Wu</p>
+        <p class="role">Product Manager, Sisyphus</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="testimonial-slide">
+      <div class="person">
+        <img src="assets/Avatar2.svg" alt="John Doe" class="avatar" />
+        <p class="name">John Doe</p>
+        <p class="role">CTO, Sisyphus</p>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slide = document.querySelectorAll('.testimonial-slide');
+  const progressFill = document.getElementById('progressFill');
+  let currentSlides = 0;
+
+  function showSlide(index) {
+    slide.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    progressFill.style.transition = 'none';
+    progressFill.style.width = '0%';
+    void progressFill.offsetWidth;
+    progressFill.style.transition = 'width 4s linear';
+    progressFill.style.width = '100%';
+  }
+
+  function nextSlide() {
+    currentSlides = (currentSlides + 1) % slide.length;
+    showSlide(currentSlides);
+  }
+
+  showSlide(currentSlides); 
+  setInterval(nextSlide, 4000); 
+</script>
+
+
+<div class="carousel-container">
+  <div class="gradient-bar"></div>
+  <div class="carousel-slide active">
+      <img src="assets/Operators.png" alt="Dashboard 1">
+      <div class="carousel-slide-content">
+          <P class="text-[#3b82f6] mb-8">Operators</P>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-2">Factory Wide Visibility &
+            Intelligence</h2>
+          <p class="text-gray-700">IoTiView offers seamless edge connectivity and outof-
+            the-box applications, empowering you to digitize
+            your factory and maximize equipment uptime.</p>
+      </div>
+  </div>
+  <div class="carousel-slide">
+      <img src="assets/FloorManager.png" alt="Dashboard 2">
+      <div class="carousel-slide-content">
+        <P class="text-[#3b82f6] mb-8">Floor Manager</P>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-2">Real-Time Control & Insights for Smarter Shop
+            Floor Management</h2>
+          <p class="text-gray-700">IoTiView offers seamless edge connectivity and outof-
+            the-box applications, empowering you to digitize
+            your factory and maximize equipment uptime.</p>
+      </div>
+  </div>
+  <div class="carousel-slide">
+      <img src="assets/ExecutiveTeam.png" alt="Dashboard 3">
+      <div class="carousel-slide-content">
+        <P class="text-[#3b82f6] mb-8">Executive Team</P>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-2">Empowering Executives with Strategic Insights and
+            Operational Excellence</h2>
+          <p class="text-gray-700">IoTiView offers seamless edge connectivity and outof-
+            the-box applications, empowering you to digitize
+            your factory and maximize equipment uptime.</p>
+      </div>
+  </div>
+  <div class="carousel-indicators">
+      <div class="carousel-indicator active"></div>
+      <div class="carousel-indicator"></div>
+      <div class="carousel-indicator"></div>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  let currentSlide = 0;
+  const gradientBar = document.querySelector('.gradient-bar');
+  let intervalId;
+
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if (i === index) {
+              slide.classList.add('active');
+          }
+      });
+      indicators.forEach((indicator, i) => {
+          indicator.classList.remove('active');
+          if (i === index) {
+              indicator.classList.add('active');
+          }
+      });
+
+      // Update gradient bar height based on the active slide index
+      const slideHeightPercentage = (index + 1) * (100 / slides.length);
+      gradientBar.style.height = `${slideHeightPercentage}%`;
+      currentSlide = index; // update currentSlide
+  }
+
+  function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+  }
+
+  function startAutoPlay() {
+      intervalId = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoPlay() {
+      clearInterval(intervalId);
+  }
+
+  // Add click handlers to the indicators
+  indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+          stopAutoPlay(); // Stop auto play when user clicks on indicator
+          showSlide(index);
+          startAutoPlay(); // Restart auto play after user interaction
+      });
+  });
+
+  // Initial display
+  showSlide(currentSlide);
+  startAutoPlay(); // Start auto play when the page loads
+
+</script>
+
+<!-- Carousel Section -->
+<section class="bg-[#f9f9f9] py-10 lg:hidden block">
+ 
+
+  <div class="relative max-w-5xl mx-auto overflow-hidden">
+    <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
+      <!-- Slide 1 -->
+      <div class="min-w-full flex flex-col items-center">
+        <div class="text-center mb-10">
+          <p class="text-blue-500 font-medium text-sm mb-10">Operators</p>
+          <h2 class="text-2xl font-semibold">Factory Wide Visibility & Intelligence</h2>
+        </div>
+        <img src="assets/Operators.png" alt="Dashboard" class="w-full max-w-[700px]" />
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="min-w-full flex flex-col items-center">
+        <div class="text-center mb-10">
+          <p class="text-blue-500 font-medium text-sm mb-10">Floor Manager</p>
+          <h2 class="text-2xl font-semibold">Real-Time Control & Insights for Smarter Shop
+            Floor Management</h2>
+        </div>
+        <img src="assets/FloorManager.png" alt="Dashboard" class="w-full max-w-[700px]" />
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="min-w-full flex flex-col items-center">
+        <div class="text-center mb-10">
+          <p class="text-blue-500 font-medium text-sm mb-10">Executive Team</p>
+          <h2 class="text-2xl font-semibold">Empowering Executives with Strategic Insights and
+            Operational Excellence</h2>
+        </div>
+        <img src="assets/ExecutiveTeam.png" alt="Dashboard" class="w-full max-w-[700px]" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="w-40 h-1 mt-8 bg-gray-300 mx-auto relative">
+    <div id="carousel-progress" class="absolute top-0 left-0 h-1 bg-blue-500 transition-all duration-700"></div>
+  </div>
+</section>
+
+<!-- Script -->
+<script>
+  const track = document.getElementById("carousel-track");
+  const progress = document.getElementById("carousel-progress");
+  const slideCount = track.children.length;
+  let current = 0;
+
+  function updateCarousel() {
+    current = (current + 1) % slideCount;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    progress.style.width = `${((current + 1) / slideCount) * 100}%`;
+  }
+
+  setInterval(updateCarousel, 4000); // change slide every 4 seconds
+</script>
+
+
+
+<!-- Solutions Section -->
+<div class="px-4 my-15">
+  <section class="solutions-section">
+    <h2>Smart Solutions for a Smarter Factory</h2>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <img src="assets/icon1.svg" alt="" />
+        <h3>Production Monitoring</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card">
+        <img src="assets/icon2.svg" alt="" />
+        <h3>Condition Monitoring</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card">
+        <img src="assets/icon3.svg" alt="" />
+        <h3>Predictive Maintenance</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card">
+        <img src="assets/icon4.svg" alt="" />
+        <h3>Scrap Identification</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card">
+        <img src="assets/icon5.svg" alt="" />
+        <h3>Tools Tracking</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card">
+        <img src="assets/icon6.svg" alt="" />
+        <h3>Process Optimization</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card">
+        <img src="assets/icon7.svg" alt="" />
+        <h3>Production Schedule</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+      </div>
+      <div class="solution-card contact-card">
+        <h3>Contact us</h3>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin.</p>
+        <a href="#" class="contact-btn">Button</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- Why IoTiView -->
+<div class="section-heading text-center my-16">
+  <h2 class="text-[24px] font-semibold mb-8">Why IoTiView?</h2>
+  <p class="subtitle">
+    Platform tackles inefficiencies head-on, empowering industries to boost productivity,
+    reduce costs, and achieve operational excellence. Here's what makes IoTiView the
+    ultimate choice for manufacturers:
+  </p>
+</div>
+<!-- === STACKED VIEW (Mobile/Tablet Only) === -->
+ 
+<div class="iotiview-stacked">
+  <div class="iotiview-card">
+    <h5>Maximizing Uptime</h5>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>Reduce unplanned downtime: System’s predictive analytics warn of potential failures.</p>
+    </div>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>More uptime means more production hours and fewer schedule disruptions.</p>
+    </div>
+  </div>
+
+  <div class="iotiview-card">
+    <h5>Optimizing Output Rate</h5>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>Identify bottlenecks and suboptimal cycle times on the production line.</p>
+    </div>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>Eliminate inefficiencies to increase throughput.</p>
+    </div>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>Higher output from the same assets.</p>
+    </div>
+  </div>
+
+  <div class="iotiview-card">
+    <h5>Improving Maintenance Scheduling</h5>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>Shift from reactive to proactive maintenance strategies.</p>
+    </div>
+    <div class="feature">
+      <img src="assets/right-click.svg" alt="✓">
+      <p>Schedule during planned downtime to avoid costly breakdowns.</p>
+    </div>
+  </div>
+</div>
+
+<!-- === DESKTOP CAROUSEL (Hidden on Mobile/Tablet) === -->
+<div class="carousel-wrapper">
+  <div class="carousel-track">
+    <div class="carousel-card">
+      <h5>Maximizing Uptime</h5>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Reduce unplanned downtime: System’s predictive analytics warn of potential failures so maintenance can be done before a breakdown occurs.</p>
+      </div>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Higher equipment availability:
+          More uptime means more
+          production hours and fewer
+          schedule disruptions.</p>
+      </div>
+    </div>
+    <div class="carousel-card active">
+      <h5>Optimizing Output Rate</h5>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Identify bottlenecks and
+          suboptimal cycle times on the
+          production line.</p>
+      </div>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Eliminating inefficiencies to
+          increases throughput.</p>
+      </div>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Machines consistently running at
+          peak capacity, and higher output
+          from the same assets.</p>
+      </div>
+    </div>
+    <div class="carousel-card">
+      <h5>Improving Maintenance
+        Scheduling</h5>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Reactive fixes to proactive
+          maintenance.</p>
+      </div>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Better scheduling of maintenance
+          during planned downtime windows
+          instead of waiting for a failure.</p>
+      </div>
+      <div class="feature-item">
+        <img src="assets/right-click.svg" class="checkmark" />
+        <p>Reduce repair costs and prevent
+          minor issues from snowballing into
+          major damage.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pagination-bar">
+  <div class="bar">
+    <div class="active-bar" id="activeBar"></div>
+  </div>
+</div>
+<script>
+  const cards = document.querySelectorAll('.carousel-card');
+  let currentIndex = 1;
+
+  function updateCarousel() {
+    cards.forEach((card, index) => {
+      card.classList.remove('prev', 'active', 'next');
+      if (index === currentIndex) {
+        card.classList.add('active');
+      } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+        card.classList.add('prev');
+      } else if (index === (currentIndex + 1) % cards.length) {
+        card.classList.add('next');
+      }
+    });
+
+    // Move active pagination bar
+    const activeBar = document.getElementById('activeBar');
+    activeBar.style.left = `${(currentIndex / cards.length) * 100}%`;
+  }
+
+  function autoPlayCarousel() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateCarousel();
+  }
+
+  updateCarousel();
+  setInterval(autoPlayCarousel, 2000); 
+</script>
+
+
+<div class="bg-white p-8 w-full lg:px-32 my-20">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="md:pr-8">
+          <h2 class="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">Get in touch</h2>
+          <p class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Ready to Transform Your Industrial Operations?</p>
+          <p class="text-gray-600 dark:text-gray-300 mb-8">Contact us today to schedule a demo and explore how IOTView can help you achieve operational excellence.</p>
+          
+          <div class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                      <label for="first-name" class="block text-sm font-medium text-gray-700 dark:text-gray-200">First name</label>
+                      <input type="text" id="first-name" placeholder="First Name" class="mt-1 p-2 w-full border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                  </div>
+                  <div>
+                      <label for="last-name" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Last name</label>
+                      <input type="text" id="last-name" placeholder="Last Name" class="mt-1 p-2 w-full border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                  </div>
+              </div>
+              <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Email</label>
+                  <input type="email" id="email" placeholder="you@company.com" class="mt-1 p-2 w-full border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+              </div>
+              <div>
+                  <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Phone number</label>
+                  <div class="mt-1 flex">
+                      <span class="inline-flex items-center px-3 border border-r-0 border-gray-300 rounded-l-md bg-gray-50 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                          US +1
+                      </span>
+                      <input type="tel" id="phone" placeholder="(555) 000-0000" class="p-2 w-full border rounded-none rounded-r-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                  </div>
+              </div>
+              <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Message</label>
+                  <textarea id="message" rows="4" placeholder="Your message..." class="mt-1 p-2 w-full border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+              </div>
+              <div class="flex items-center">
+                  <input type="checkbox" id="privacy" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-400">
+                  <label for="privacy" class="ml-2 block text-sm font-medium text-gray-700 dark:text-gray-200">
+                      You agree to our friendly privacy policy
+                  </label>
+              </div>
+              <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-5 rounded-md focus:outline-none focus:shadow-outline transition duration-300 ease-in-out w-full">
+                  Send Message
+              </button>
+          </div>
+      </div>
+      <div class="flex items-center justify-center bg-[rgba(205,228,255,1)] rounded-lg">
+          <img src="assets/dashboard.png" alt="Dashboard Preview" class="lg:w-[482px] w-[270px] h-auto py-4 lg:py-0">
+      </div>
+  </div>
+</div>
+
+
+<footer class="footer bg-white text-black py-8">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 pb-10">
+
+      <!-- Left Column -->
+      <div class="lg:w-1/2 space-y-4 px-6">
+        <div class="footer-logo">
+          <img src="assets/company-icon.svg" alt="IOTIVIEW Logo" class="h-10">
+        </div>
+        <p>Crypto ipsum bitcoin ethereum dogecoin litecoin. Helium dash hedera ethereum BitTorrent TRON.</p>
+        <div class="flex space-x-4">
+          <a href="#"><img src="assets/twitter.svg" class="h-6" /></a>
+          <a href="#"><img src="assets/facebook.svg" class="h-6" /></a>
+          <a href="#"><img src="assets/linkedin.svg" class="h-6" /></a>
+          <a href="#"><img src="assets/youtube.svg" class="h-6" /></a>
+        </div>
+      </div>
+
+      <!-- Right Columns with Accordion Behavior -->
+      <div class="lg:w-2/3 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+        <!-- Section -->
+        <div class="space-y-4">
+          <button class="w-full flex justify-between items-center lg:cursor-default text-left font-semibold text-lg lg:pointer-events-none" onclick="toggleFooterSection('solutions')">
+            Solutions <span class="lg:hidden">&#x25BC;</span>
+          </button>
+          <ul id="solutions" class="space-y-2 lg:block hidden">
+            <li><a href="#">Production Monitoring</a></li>
+            <li><a href="#">Condition Monitoring</a></li>
+            <li><a href="#">Predictive Maintenance</a></li>
+            <li><a href="#">Scrap Identification</a></li>
+            <li><a href="#">Tools Tracking</a></li>
+            <li><a href="#">Process Optimization*</a></li>
+            <li><a href="#">Production Schedule*</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <button class="w-full flex justify-between items-center lg:cursor-default text-left font-semibold text-lg lg:pointer-events-none" onclick="toggleFooterSection('industries')">
+            Industries <span class="lg:hidden">&#x25BC;</span>
+          </button>
+          <ul id="industries" class="space-y-2 lg:block hidden">
+            <li><a href="#">Aerospace & Defense</a></li>
+            <li><a href="#">Automotive</a></li>
+            <li><a href="#">Heavy Machinery</a></li>
+            <li><a href="#">Oil & Gas</a></li>
+            <li><a href="#">Manufacturing</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <button class="w-full flex justify-between items-center lg:cursor-default text-left font-semibold text-lg lg:pointer-events-none" onclick="toggleFooterSection('company')">
+            Company <span class="lg:hidden">&#x25BC;</span>
+          </button>
+          <ul id="company" class="space-y-2 lg:block hidden">
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Release</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <button class="w-full flex justify-between items-center lg:cursor-default text-left font-semibold text-lg lg:pointer-events-none" onclick="toggleFooterSection('insights')">
+            Insights <span class="lg:hidden">&#x25BC;</span>
+          </button>
+          <ul id="insights" class="space-y-2 lg:block hidden">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8 space-y-2 text-sm">
+      <p>© 2025 IoTiView. All rights reserved</p>
+      <p>
+        <a href="#" class="underline">Cookie Settings</a>,
+        <a href="#" class="underline">Anti-Spam</a>,
+        <a href="#" class="underline">Privacy</a>,
+        <a href="#" class="underline">User agreement</a>,
+        <a href="#" class="underline">Legal Notice</a> and
+        <a href="#" class="underline">Responsible Disclosure</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleFooterSection(id) {
+      const el = document.getElementById(id);
+      if (window.innerWidth < 1024) {
+        el.classList.toggle('hidden');
+      }
+    }
+  </script>
+</footer>
+
+</body>
+</html>
